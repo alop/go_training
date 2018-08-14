@@ -21,10 +21,10 @@ func getInput() int {
 func askAgain() {
 	e := recover()
 	fmt.Println("recovered from", e)
-	var second_num int
-	second_num = getInput()
+	var retry_num int
+	retry_num = getInput()
 
-	calculateFactorial(second_num)
+	calculateFactorial(retry_num)
 }
 
 func calculateFactorial(_num int) {
