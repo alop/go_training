@@ -21,7 +21,9 @@ func getInput() int64 {
 
 func askAgain() {
 	e := recover()
-	fmt.Println("recovered from", e)
+	if e != nil {
+		fmt.Println("recovered from", e)
+	}
 	var retry_num int64
 	retry_num = getInput()
 
