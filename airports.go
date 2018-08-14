@@ -74,13 +74,10 @@ func askInput() []string {
 	for reader.Scan() {
 		fmt.Println("Next Airport Code?: ")
 		apc := reader.Text()
-		itinerary = append(itinerary, apc)
 		if len(apc) < 3 {
 			break
 		}
-		if err := reader.Err(); err != nil {
-			break
-		}
+		itinerary = append(itinerary, apc)
 	}
 	return itinerary
 }
